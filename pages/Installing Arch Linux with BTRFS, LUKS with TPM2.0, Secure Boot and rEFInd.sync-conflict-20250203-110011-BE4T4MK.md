@@ -202,6 +202,7 @@
 		  ```
 - # Enabling Secure Boot and TPM 2.0
 	- Enabling Secure Boot in `rEFind` using Pre Signed Bootloader.
+	  collapsed:: true
 		- Install `preloader-signed` from the `AUR`
 		- ```
 		  $ yay -Syu preloader-signed
@@ -212,6 +213,7 @@
 		  ```
 		- After a reboot with Secure Boot enabled from the `UEFI` firmware menu, HashTool will launch and it is needed to enroll the hash of rEFInd `loader.efi` and the kernel `vmlinuz-linux-zen`
 	- TPM 2.0
+	  collapsed:: true
 		- Check if the system supports TPM 2.0
 		- ```
 		  cat /sys/class/tpm/tpm0/device/description
@@ -233,4 +235,6 @@
 		  ```
 	- For more information on LUKS encryption (Adding FIDO 2 Devices as unlock key, etc) Refer to [[Enabling Yubikey Security Key unlock for LUKS Encrypted Root Partition]]
 	- Note for TPM 2.0 Key: If dual booting with Windows and/or messing with TPM 2.0 keys on the BIOS/UEFI, the keys can be reset/modified. This will result into the TPM 2.0 unlock key not be able to be used and during boot will be asked for the LUKS encryption passkey (VERY IMPORTANT TO SET A PASSKEY AS OUTLINED EARLIER IN THIS GUIDE and to remember this passkey, this will serve as backup). To re-enable TPM 2.0 unlock, just re-enroll the TPM 2.0 key.
+	  collapsed:: true
 		- Updated on January 23, 2025 for the TPM 2.0 Note. The Dual-boot windows partition had an update and may have messed with the TPM 2.0 keys.
+-
