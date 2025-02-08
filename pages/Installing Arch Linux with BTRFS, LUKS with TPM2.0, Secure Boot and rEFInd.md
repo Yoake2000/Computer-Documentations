@@ -231,4 +231,5 @@
 		- ```
 		  rd.luks.options=tpm2-device=auto
 		  ```
-	-
+	- Note for TPM 2.0 Key: If dual booting with Windows and/or messing with TPM 2.0 keys on the BIOS/UEFI, the keys can be reset/modified. This will result into the TPM 2.0 unlock key not be able to be used and during boot will be asked for the LUKS encryption passkey (VERY IMPORTANT TO SET A PASSKEY AS OUTLINED EARLIER IN THIS GUIDE and to remember this passkey, this will serve as backup). To re-enable TPM 2.0 unlock, just re-enroll the TPM 2.0 key.
+		- Updated on January 23, 2025 for the TPM 2.0 Note. The Dual-boot windows partition had an update and may have messed with the TPM 2.0 keys.
