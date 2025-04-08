@@ -13,3 +13,5 @@
 - [[using supergfxcontrol for gpu mode switching at boot]]
 - [[mounting samba shared folders in linux]]
 - [[installing arch linux with btrfs, luks with tpm2.0, secure boot and refind]]
+- [[Fixing Pipewire Crackling Sound in Proton-GE/Wine Games]]
+-
