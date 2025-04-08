@@ -1,7 +1,7 @@
-- {{renderer :tocgen2, [[hp victus 16 resizable bar and vram configurations for linux]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[force all android apps to be rotatable.]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[enabling yubikey security key unlock for luks encrypted root partition]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[advanced bios settings for hp victus 16]], calc(100vh - 135px)}}
+- [[hp victus 16 resizable bar and vram configurations for linux]]
+- [[force all android apps to be rotatable.]]
+- [[enabling yubikey security key unlock for luks encrypted root partition]]
+- [[advanced bios settings for hp victus 16]]
 - {{renderer :tocgen2, [[enabling authentication in gdm,sudo and passkey in browsers using yubikey security key]], calc(100vh - 135px)}}
 - {{renderer :tocgen2, [[hp victus 16 fan control]], calc(100vh - 135px)}}
 - {{renderer :tocgen2, [[controlling external monitor options using ddc in kde]], calc(100vh - 135px)}}
