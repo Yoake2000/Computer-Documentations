@@ -13,5 +13,5 @@
 - # Adding GPU modes selection on Refind Bootloader
 	- Refer to ((6633b1dd-15b1-44ec-ace9-41dae827b72e)).
 -
-- As of [[Jul 25th, 2025]], switching to integrated mode does not work and the dGPU is still active even after logging out and/or restarting. I opted to remove everything related to `supergfxcontrol` since the power savings are not that significant imo.
+- As of [[Jul 25th, 2025]], switching to integrated mode does not work and the dGPU is still active even after logging out and/or restarting. I opted to remove everything related to `supergfxcontrol` since the power savings are not that significant IMO. I tried this to test if switching modes work and al
 -
