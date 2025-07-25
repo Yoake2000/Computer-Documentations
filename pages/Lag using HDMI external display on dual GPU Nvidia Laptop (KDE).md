@@ -11,4 +11,6 @@
 		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
 		- https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/
 - As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux [[Jul 25th, 2025]]. I used Gnome in the past and also faced this issue. Other users using gnome also faces this issue up until recently based on the posts above.
-- There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in this art
+- Tried using `envycontrol` to force the system to only use the Nvidia GPU
+- There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in [this article.](https://tongkl.com/kde-plasma-laggy-external-monitor/)
+	-
