@@ -421,4 +421,5 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :graph/settings {:builtin-pages? true
- :journal? true}}
+ :journal? true}
+ :publishing/all-pages-public? true}
