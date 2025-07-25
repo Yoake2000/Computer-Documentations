@@ -1,0 +1,27 @@
+- There is an issue when using external displays on dual GPU nvidia (hybrid) laptops like HP Victus 16 and connecting them to an HDMI port(mostly), the output is laggy/stuttering and looks like its being rendered with significantly lower frame rate than is set. The lag is apparent on animations that are expected to be smooth such as scrolling webpages, changing desktop workspace, etc.
+- I've also experienced this on windows when inserting the monitor to an already booted up laptop. The issue disappears though after a restart.
+- Reading through forum posts with people that experienced the same problem, the problem can be traced to how Linux handles GPU offloading, specifically on [Reverse PRIME.](https://wiki.archlinux.org/title/PRIME) So far I haven't seen someone with a dual GPU that is using an AMD GPU that has this problem. This may have been a problem for hybrid Nvidia laptops specially without a MUX switch since offloading is not optional for these kinds of laptops. A lot pins the blame on the Nvidia drivers, some on the compositor and/or the Wayland protocol. I haven't tried X11 on KDE to test if the problem persists there but as I remember, I had bad performance on X11 last time I used it.
+	- Posts read:
+		- [https://www.reddit.com/r/pop_os/comments/o6mxpl/nvidiaintel_hybrid_mode_external_display/](https://www.reddit.com/r/pop_os/comments/o6mxpl/nvidiaintel_hybrid_mode_external_display/)
+		- [https://www.reddit.com/r/pop_os/comments/1eo5rxp/nvidia_hybrid_graphics_feels_laggy_on_external/](https://www.reddit.com/r/pop_os/comments/1eo5rxp/nvidia_hybrid_graphics_feels_laggy_on_external/)
+		- [https://www.reddit.com/r/archlinux/comments/1gpllol/super_laggy_2nd_display_on_hybrid_nvidia_machine/](https://www.reddit.com/r/archlinux/comments/1gpllol/super_laggy_2nd_display_on_hybrid_nvidia_machine/)
+		- [https://forums.developer.nvidia.com/t/acer-nitro-anv15-51-7837-rtx-3050-bad-performance-when-trying-external-hdmi-video/336521](https://forums.developer.nvidia.com/t/acer-nitro-anv15-51-7837-rtx-3050-bad-performance-when-trying-external-hdmi-video/336521)
+		- [https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59](https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59)
+		- [https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/](https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/)
+		- [https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/](https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/)
+- As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux . I used Gnome in the past and also faced this issue. Other users using gnome also faces this issue up until recently based on the posts above.
+- Tried using `envycontrol` to force the system to only use the Nvidia GPU but it did not work. Upon checking `nvidia-smi`, everything is still rendered using the iGPU. Also tried adjusting the refresh rates, scaling and other settings to match the Laptop display but to no avail.
+- There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in [this article.](https://tongkl.com/kde-plasma-laggy-external-monitor/)
+	- Use `lspci | grep VGA` to determine the PCI address of the GPUs.
+	- Add the following line to `/etc/environment` with the corresponding PCI addresses of the GPUs obtained previously.
+		- ```
+		  KWIN_DRM_DEVICES="/dev/dri/by-path/pci-0000\:01\:00.0-card:/dev/dri/by-path/pci-0000\:07\:00.0-card"
+		  ```
+		- The PCI address for my Nvidia GPU is `01:00.0`
+		- For the AMD GPU `07:00.0`
+	- Related posts to the article:
+		- [https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/19](https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/19)
+		- [https://invent.kde.org/plasma/kwin/-/wikis/Environment-Variables#kwin_drm_devices](https://invent.kde.org/plasma/kwin/-/wikis/Environment-Variables#kwin_drm_devices)
+		- [https://www.reddit.com/r/kde/comments/18tqx2k/laggy_display_when_using_egpu_on_fedora_kde_spin/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1](https://www.reddit.com/r/kde/comments/18tqx2k/laggy_display_when_using_egpu_on_fedora_kde_spin/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1)
+	- This workaround though increases power and resource usage. If only using battery, it will drain significantly faster with this.
+- I opted to use a dongle with HDMI connected to the USB-C port on my laptop. This eliminates the lag/stutter issue. The DDC/CI for my monitor also works even through it. I suspect (and is highly probable) that the output from the USB-C is connected to the iGPU and that the HDMI port is connected to the Nvidia dGPU. The offloading to the dGPU may have been the issue and I also suspect that the cause is something related to the Nvidia proprietary drivers. [Someone](https://www.reddit.com/r/archlinux/comments/1gpllol/comment/lx3qg5y/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)  tried the `nouveau` drivers and achieved a somewhat acceptable performance.
