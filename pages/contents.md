@@ -10,4 +10,12 @@
 - [[configuring the refind bootloader for custom boot menu stanzas]]
 - [[using supergfxcontrol for gpu mode switching at boot]]
 - [[mounting samba shared folders in linux]]
-- []
+- [[Lag using HDMI external display on dual GPU Nvidia Laptop (KDE)]]
+- [[Fixing Pipewire Crackling Sound in Proton-GE/Wine Games]]
+- [[NVIDIA Optimus Tweaks and Configurations on Arch Linux (AMD Ryzen, Victus 16)]]
+- [[Converting Windows Cursors to Linux Cursors]]
+- [[SDDM Wayland Configuration]]
+- [[Fixing Hibernate in Arch Linux System-NVME]]
+- [[Force all android apps to be rotatable.]]
+- [[Enabling Yubikey Security Key unlock for LUKS Encrypted Root Partition]]
+-
