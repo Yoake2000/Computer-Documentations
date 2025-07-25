@@ -35,4 +35,8 @@
 - logseq.order-list-type:: number
 - [[CasaOS - VPN connection for Docker Container within CasaOS Using Gluetun. Windscribe VPN Provider]]
   logseq.order-list-type:: number
+- [[Waydroid on Arch Linux KDE Plasma 6 - AMD CPU and Nvidia GPU]]
+  logseq.order-list-type:: number
+- [[SDDM Wayland Configuration]]
+  logseq.order-list-type:: number
 - logseq.order-list-type:: number
