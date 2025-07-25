@@ -1,8 +1,8 @@
-- {{renderer :tocgen2, [[hp victus 16 resizable bar and vram configurations for linux]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[advanced bios settings for hp victus 16]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[enabling authentication in gdm,sudo and passkey in browsers using yubikey security key]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[hp victus 16 fan control]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[controlling external monitor options using ddc in kde]], calc(100vh - 135px)}}
+- [[hp victus 16 resizable bar and vram configurations for linux]]
+- [[advanced bios settings for hp victus 16]]
+- [[enabling authentication in gdm,sudo and passkey in browsers using yubikey security key]]
+- [[hp victus 16 fan control]]
+- [[controlling external monitor options using ddc in kde]]
 - {{renderer :tocgen2, [[Setting up Linux Raspberry Pi 4 with a broken monitor screen. (Notes on feb 22,2024 transferred from obsidian)]] , calc(100vh - 135px)}}
 - {{renderer :tocgen2, [[yubikey security key for kde plasma 6 sddm and lockscreen login in linux]], calc(100vh - 135px)}}
 - {{renderer :tocgen2, [[automating ryzenadj limit on kde with password prompt]], calc(100vh - 135px)}}
