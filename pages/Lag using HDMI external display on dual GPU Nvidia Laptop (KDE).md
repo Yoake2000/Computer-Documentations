@@ -7,9 +7,8 @@
 		- https://www.reddit.com/r/archlinux/comments/1gpllol/super_laggy_2nd_display_on_hybrid_nvidia_machine/
 		- https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/22
 		- https://forums.developer.nvidia.com/t/acer-nitro-anv15-51-7837-rtx-3050-bad-performance-when-trying-external-hdmi-video/336521
-		- https://tongkl.com/kde-plasma-laggy-external-monitor/
 		- https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59
 		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
 		- https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/
 - As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux [[Jul 25th, 2025]]. I used Gnome in the past and also faced this issue. Other users using gnome also faces this issue up until recently based on the posts above.
-- A fix
+- There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offload
