@@ -33,3 +33,4 @@
 - [[Lag using HDMI external display on dual GPU Nvidia Laptop (KDE)]]
   logseq.order-list-type:: number
 - logseq.order-list-type:: number
+- logseq.order-list-type:: number
