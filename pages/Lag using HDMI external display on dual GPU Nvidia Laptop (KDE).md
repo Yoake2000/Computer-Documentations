@@ -10,7 +10,6 @@
 		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
 		- https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/
 - As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux [[Jul 25th, 2025]]. I used Gnome in the past and also faced this issue. Other users using gnome also faces this issue up until recently based on the posts above.
-- IMO, this
 - Tried using `envycontrol` to force the system to only use the Nvidia GPU but it did not work. Upon checking `nvidia-smi`, everything is still rendered using the iGPU. Also tried adjusting the refresh rates, scaling and other settings to match the Laptop display but to no avail.
 - There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in [this article.](https://tongkl.com/kde-plasma-laggy-external-monitor/)
 	- Use `lspci | grep VGA` to determine the PCI address of the GPUs.
@@ -25,4 +24,4 @@
 		- https://invent.kde.org/plasma/kwin/-/wikis/Environment-Variables#kwin_drm_devices
 		- https://www.reddit.com/r/kde/comments/18tqx2k/laggy_display_when_using_egpu_on_fedora_kde_spin/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1
 	- This workaround though increases power and resource usage. If only using battery, it will drain significantly faster with this.
--
+- I opted to use a dongle with HDMI connected to the USB-C port on my laptop.
