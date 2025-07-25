@@ -11,8 +11,7 @@
 		- ```
 		  nvidia.NVreg_EnableGpuFirmware=0
 		  ```
-		- This disables the usage of the new firmware and so far I did not see any problems or glitches. This does not completely solves the problem though and it is very apparent when playing games. Framerates would not be as smooth.
-		-
+		- This disables the usage of the new firmware and so far I did not see any problems or glitches. This does not completely solves the problem though and it is very apparent when playing games. Framerates would not be as smooth
 	- There's also this environment variable (``/etc/environment`` for global variables):
 		- ```
 		  OGL_DEDICATED_HW_STATE_PER_CONTEXT=ENABLE_ROBUST
