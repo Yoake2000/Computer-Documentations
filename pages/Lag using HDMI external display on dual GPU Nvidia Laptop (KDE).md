@@ -19,4 +19,8 @@
 		  ```
 		- The PCI address for my Nvidia GPU is `01:00.0`
 		- For the AMD GPU `07:00.0`
-	- Similar posts
+	- Related posts to the article:
+		- https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/19
+		- https://invent.kde.org/plasma/kwin/-/wikis/Environment-Variables#kwin_drm_devices
+		- https://www.reddit.com/r/kde/comments/18tqx2k/laggy_display_when_using_egpu_on_fedora_kde_spin/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1
+	- This workaround though increases power and resource usage
