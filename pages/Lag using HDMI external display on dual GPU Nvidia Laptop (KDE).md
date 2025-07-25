@@ -5,7 +5,6 @@
 		- https://www.reddit.com/r/pop_os/comments/o6mxpl/nvidiaintel_hybrid_mode_external_display/
 		- https://www.reddit.com/r/pop_os/comments/1eo5rxp/nvidia_hybrid_graphics_feels_laggy_on_external/
 		- https://www.reddit.com/r/archlinux/comments/1gpllol/super_laggy_2nd_display_on_hybrid_nvidia_machine/
-		- https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/22
 		- https://forums.developer.nvidia.com/t/acer-nitro-anv15-51-7837-rtx-3050-bad-performance-when-trying-external-hdmi-video/336521
 		- https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59
 		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
@@ -14,9 +13,10 @@
 - Tried using `envycontrol` to force the system to only use the Nvidia GPU but it did not work. Upon checking `nvidia-smi`, everything is still rendered using the iGPU. Also tried adjusting the refresh rates, scaling and other settings to match the Laptop display but to no avail.
 - There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in [this article.](https://tongkl.com/kde-plasma-laggy-external-monitor/)
 	- Use `lspci | grep VGA` to determine the PCI address of the GPUs.
-	- add the following line to `/etc/environment` with the corresponding PCI addresses of the GPUs obtained previously.
+	- Add the following line to `/etc/environment` with the corresponding PCI addresses of the GPUs obtained previously.
 		- ```
 		  KWIN_DRM_DEVICES="/dev/dri/by-path/pci-0000\:01\:00.0-card:/dev/dri/by-path/pci-0000\:07\:00.0-card"
 		  ```
 		- The PCI address for my Nvidia GPU is `01:00.0`
-		- For the AMD GPU `07:`
+		- For the AMD GPU `07:00.0`
+	-
