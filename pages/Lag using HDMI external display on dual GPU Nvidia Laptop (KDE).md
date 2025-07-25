@@ -14,4 +14,8 @@
 - Tried using `envycontrol` to force the system to only use the Nvidia GPU but it did not work. Upon checking `nvidia-smi`, everything is still rendered using the iGPU. Also tried adjusting the refresh rates, scaling and other settings to match the Laptop display but to no avail.
 - There's a workaround fix for this issue in KDE Plasma. The idea behind it is to render everything in the desktop to the Nvidia GPU and offloads it into the iGPU if using displays connected to it such as the built in display for laptops. The steps are outlined in [this article.](https://tongkl.com/kde-plasma-laggy-external-monitor/)
 	- Use `lspci` to determine the PCI address of the GPUs.
-	- add the following lin
+	- add the following line to `/etc/environment` with the corresponding PCI addresses of the GPUs obtained previously.
+		- ```
+		  KWIN_DRM_DEVICES="/dev/dri/by-path/pci-0000\:01\:00.0-card:/dev/dri/by-path/pci-0000\:07\:00.0-card"
+		  ```
+		- My
