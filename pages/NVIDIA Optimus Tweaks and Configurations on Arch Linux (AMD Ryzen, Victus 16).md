@@ -12,12 +12,13 @@
 		  nvidia.NVreg_EnableGpuFirmware=0
 		  ```
 		- This disables the usage of the new firmware and so far I did not see any problems or glitches. This does not completely solves the problem though and it is very apparent when playing games. Framerates would not be as smooth.
+		-
 	- There's also this environment variable (``/etc/environment`` for global variables):
 		- ```
 		  OGL_DEDICATED_HW_STATE_PER_CONTEXT=ENABLE_ROBUST
 		  ```
 		- that supposedly would solve the problem but I still haven't tried. From the experience of a user in the bug page, it didn't work for them though.
-	- I once again tried to fix this problem on KDE Plasma 6.
+	- I once again tried to fix this problem on KDE Plasma 6.4.3 Arch Linux and the details are on [[Lag using HDMI external display on dual GPU Nvidia Laptop (KDE)]]
 - # Power Limit of Nvidia RTX 3050ti is capped at 65W compared to Windows that is able to run at 75W
 	- From my anecdotal experience, game performance on Windows and Arch linux (as of June 2024) is on par and maybe sometimes superior on the latter. Some games though run at lower framerates on Linux such as Counter Strike 2.
 		- Regarding Counter Strike 2, performance on the current (as of writing) release version of the NVIDIA and with default configurations was abysmal compared to windows with most of the time hovering at 60 fps with a lot of stutters and spike compared to around 120 fps on windows. After using the beta drivers, the framerates have stabilized at around 100 fps without stutters.
