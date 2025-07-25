@@ -30,4 +30,5 @@
   logseq.order-list-type:: number
 - [[Fixing Pipewire Crackling Sound in Proton-GE Wine Games]]
   logseq.order-list-type:: number
+- logseq.order-list-type:: number
 -
