@@ -1,0 +1,1 @@
+- There is an issue when using external displays on dual GPU nvidia (hybrid) lap
