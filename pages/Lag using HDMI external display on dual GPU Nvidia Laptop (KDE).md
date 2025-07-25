@@ -11,5 +11,5 @@
 		- https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59
 		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
 		- https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/
-- As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux [[Jul 25th, 2025]].
+- As of writing this, I'm using KDE Plasma 6.4.3 on Arch Linux [[Jul 25th, 2025]]. I used Gnome in the past and also faced this issue. Other users using gnome
 -
