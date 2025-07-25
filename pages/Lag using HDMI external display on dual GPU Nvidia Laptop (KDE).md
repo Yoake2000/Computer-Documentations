@@ -1,2 +1,2 @@
-- There is an issue when using external displays on dual GPU nvidia (hybrid) laptops like HP Victus 16 and connecting them to an HDMI port(mostly), the output is laggy/stuttering and looks like its being rendered with significantly lower frame rate than is set.
+- There is an issue when using external displays on dual GPU nvidia (hybrid) laptops like HP Victus 16 and connecting them to an HDMI port(mostly), the output is laggy/stuttering and looks like its being rendered with significantly lower frame rate than is set. The lag is apparent on animations that are expected to be smooth such as scrolling webpages, changing desktop workspace, etc.
 -
