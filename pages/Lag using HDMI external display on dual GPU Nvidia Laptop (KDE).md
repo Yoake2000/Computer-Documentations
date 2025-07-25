@@ -1,1 +1,1 @@
-- There is an issue when using external displays on dual GPU nvidia (hybrid) lap
+- There is an issue when using external displays on dual GPU nvidia (hybrid) laptops like HP Victus 16 and connecting them to an HDMI port(mostly), the
