@@ -18,4 +18,7 @@
 - [[Fixing Hibernate in Arch Linux System-NVME]]
 - [[Force all android apps to be rotatable.]]
 - [[Enabling Yubikey Security Key unlock for LUKS Encrypted Root Partition]]
+- [[Installing Arch Linux with BTRFS, LUKS with TPM2.0, Secure Boot and rEFInd]]
+- [[CasaOS - VPN connection for Docker Container within CasaOS Using Gluetun. Windscribe VPN Provider]]
+- [[Waydroid on Arch Linux KDE Plasma 6 - AMD CPU and Nvidia GPU]]
 -
