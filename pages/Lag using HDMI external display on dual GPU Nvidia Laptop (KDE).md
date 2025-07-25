@@ -19,4 +19,4 @@
 		  ```
 		- The PCI address for my Nvidia GPU is `01:00.0`
 		- For the AMD GPU `07:00.0`
-	-
+	- Similar posts
