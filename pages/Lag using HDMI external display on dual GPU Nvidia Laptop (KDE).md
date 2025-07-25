@@ -2,5 +2,14 @@
 - I've also experienced this on windows when inserting the monitor to an already booted up laptop. The issue disappears though after a restart.
 - Reading through forum posts with people that experienced the same problem, the problem can be traced to how Linux handles GPU offloading, specifically on [Reverse PRIME.](https://wiki.archlinux.org/title/PRIME) So far I haven't seen someone with a dual GPU that is using an AMD GPU that has this problem. This may have been a problem for hybrid Nvidia laptops specially without a MUX switch since offloading is not optional for these kinds of laptops. A lot pins the blame on the Nvidia drivers, some on the compositor and/or the Wayland protocol. I haven't tried X11 on KDE to test if the problem persists there but as I remember, I had bad performance on X11 last time I used it.
 	- Posts read:
-		-
-- The problem is also present
+		- https://www.reddit.com/r/pop_os/comments/o6mxpl/nvidiaintel_hybrid_mode_external_display/
+		- https://www.reddit.com/r/pop_os/comments/1eo5rxp/nvidia_hybrid_graphics_feels_laggy_on_external/
+		- https://www.reddit.com/r/archlinux/comments/1gpllol/super_laggy_2nd_display_on_hybrid_nvidia_machine/
+		- https://discussion.fedoraproject.org/t/display-rendering-is-slow-on-plasma-6-on-an-external-monitor/114143/22
+		- https://forums.developer.nvidia.com/t/acer-nitro-anv15-51-7837-rtx-3050-bad-performance-when-trying-external-hdmi-video/336521
+		- https://tongkl.com/kde-plasma-laggy-external-monitor/
+		- https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/59
+		- https://www.reddit.com/r/archlinux/comments/134q5fz/external_monitor_input_feels_laggy_and_slow/
+		- https://www.reddit.com/r/linuxquestions/comments/o9ilxc/linux_dual_monitor_lag/
+-
+-
