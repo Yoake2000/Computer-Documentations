@@ -24,4 +24,4 @@
 		- https://invent.kde.org/plasma/kwin/-/wikis/Environment-Variables#kwin_drm_devices
 		- https://www.reddit.com/r/kde/comments/18tqx2k/laggy_display_when_using_egpu_on_fedora_kde_spin/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1
 	- This workaround though increases power and resource usage. If only using battery, it will drain significantly faster with this.
-- I opted to use a dongle with HDMI connected to the USB-C port on my laptop. This eliminates the lag/stutter issue. I suspect (and is highly probable) that the output from the USB-C is connected to the iGPU and that the HDMI
+- I opted to use a dongle with HDMI connected to the USB-C port on my laptop. This eliminates the lag/stutter issue. The DDC/CI for my monitor also works even through it. I suspect (and is highly probable) that the output from the USB-C is connected to the iGPU and that the HDMI port is connected to the Nvidia dGPU. The offloading may havb
