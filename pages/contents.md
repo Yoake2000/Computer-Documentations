@@ -10,3 +10,4 @@
 - [[configuring the refind bootloader for custom boot menu stanzas]]
 - [[using supergfxcontrol for gpu mode switching at boot]]
 - [[mounting samba shared folders in linux]]
+- []
